@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hex Color Picker</h1>
+        
+        <div class="color-inputs">
+            <div class="input-group">
+                <label for="color1">Color 1:</label>
+                <input type="color" id="color1" value="#ff0000">
+                <input type="text" id="hex1" value="#ff0000" maxlength="7">
+            </div>
+            
+            <div class="input-group">
+                <label for="color2">Color 2:</label>
+                <input type="color" id="color2" value="#0000ff">
+                <input type="text" id="hex2" value="#0000ff" maxlength="7">
+            </div>
+        </div>
+
+        <div class="previews">
+            <div class="preview-section">
+                <h3>Solid Color Preview</h3>
+                <div class="solid-previews">
+                    <div class="solid-preview" id="solid1"></div>
+                    <div class="solid-preview" id="solid2"></div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3>Gradient Preview</h3>
+                <div class="gradient-controls">
+                    <label for="direction">Direction:</label>
+                    <select id="direction">
+                        <option value="to right">Left to Right</option>
+                        <option value="to left">Right to Left</option>
+                        <option value="to bottom">Top to Bottom</option>
+                        <option value="to top">Bottom to Top</option>
+                        <option value="to bottom right">Top-Left to Bottom-Right</option>
+                        <option value="to bottom left">Top-Right to Bottom-Left</option>
+                    </select>
+                </div>
+                <div class="gradient-preview" id="gradient"></div>
+            </div>
+        </div>
+
+        <div class="color-info">
+            <div class="info-section">
+                <h4>Color 1 Info</h4>
+                <p id="info1">Hex: #ff0000</p>
+            </div>
+            <div class="info-section">
+                <h4>Color 2 Info</h4>
+                <p id="info2">Hex: #0000ff</p>
+            </div>
+            <div class="info-section">
+                <h4>Gradient CSS</h4>
+                <textarea id="gradient-css" readonly>background: linear-gradient(to right, #ff0000, #0000ff);</textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
